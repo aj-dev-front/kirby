@@ -1,0 +1,26 @@
+#render-game {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-areas: "background-game";
+  place-content: center;
+}
+
+#background {
+  grid-area: background-game;
+
+  height: 100dvh;
+  max-height: 100dvw;
+  max-width: 100dvw;
+  aspect-ratio: 1/1;
+}
+
+#game {
+  grid-area: background-game;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}

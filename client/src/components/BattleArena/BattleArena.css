@@ -1,0 +1,58 @@
+#game-battle-arena {
+  display: grid;
+  grid-template-areas:
+    "announce announce"
+    "kirby knight";
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, clamp(15%, 10dvh, 20%));
+  width: 100%;
+  height: 50%;
+  justify-content: space-around;
+}
+
+.message {
+  grid-area: announce;
+  justify-self: center;
+}
+
+#game-ajime {
+  grid-area: announce;
+  height: 100%;
+  width: 50%;
+  justify-self: center;
+}
+#game-kirby {
+  grid-area: kirby;
+  height: 100%;
+  width: 100%;
+}
+#game-knight {
+  grid-area: knight;
+  height: 100%;
+  width: 100%;
+}
+
+.character {
+  aspect-ratio: 1/1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.selected:before {
+  content: "";
+  display: block;
+  height: 10dvh;
+  width: 10dvh;
+  background-image: url(../../../public/images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.character > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}

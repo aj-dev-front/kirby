@@ -1,0 +1,60 @@
+.waiting-message {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+hgroup {
+  text-align: center;
+}
+h1,
+p {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.waiting {
+  position: relative;
+  left: -50dvw;
+  width: 0.75rem;
+  height: 0.75rem;
+  animation: waiting 2.5s infinite steps(2, end);
+}
+
+@keyframes waiting {
+  0% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+  16.667% {
+    box-shadow: calc(50dvw - 1rem) -10px 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) -10px 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+  33.333% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+  50% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw -10px 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw -10px 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+  66.667% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+  83.333% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) -10px 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) -10px 0 1px white;
+  }
+  100% {
+    box-shadow: calc(50dvw - 1rem) 0 0 0 black, 50dvw 0 0 0 black,
+      calc(50dvw + 1rem) 0 0 0 black, calc(50dvw - 1rem) 0 0 1px white,
+      50dvw 0 0 1px white, calc(50dvw + 1rem) 0 0 1px white;
+  }
+}
